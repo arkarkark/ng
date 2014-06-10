@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="Ng" ng-controller="NgCtrl as ngCtrl">
+  <head>
+    <title>{{ngCtrl.MyLocation.title || 'Ng App'}}</title>
+    <base href="/">
+    <script src="third_party/angular.js"></script>
+    <script src="third_party/angular-ui-router.js"></script>
+    <script src="components/mylocation/mylocation_service.js"></script>
+    <script src="components/ng/ng_ctrl.js"></script>
+    <script src="components/admin/admin_module.js"></script>
+    <script src="components/admin/general/admin_general_ctrl.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1>Ng App {{ngCtrl.MyLocation.title || 'no title'}}</h1>
+    <div ui-view>this is the ng-view</div>
+    <a href="/flipflops/">Flipflops</a>
+    <a href="/wibble">wibble</a>
+    <a href="/unknown">unknown</a>
+    <a href="/">home</a><br>
+
+    SELF<br>
+    <a target="_self" href="/flipflops/">Flipflops</a>
+    <a target="_self" href="/wibble">wibble</a>
+    <a target="_self" href="/unknown">unknown</a>
+    <a target="_self" href="/">home</a><br>
+
+  </body>
+</html>
