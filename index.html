@@ -3,17 +3,24 @@
   <head>
     <title>{{ngCtrl.MyLocation.title || 'Ng App'}}</title>
     <base href="/">
+
+    <link rel="stylesheet" href="app.css">
     <script src="third_party/angular.js"></script>
     <script src="third_party/angular-ui-router.js"></script>
     <script src="components/mylocation/mylocation_service.js"></script>
     <script src="components/ng/ng_ctrl.js"></script>
     <script src="components/admin/admin_module.js"></script>
     <script src="components/admin/general/admin_general_ctrl.js"></script>
+    <script src="components/explore/explore_ctrl.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
     <h1>Ng App {{ngCtrl.MyLocation.title || 'no title'}}</h1>
-    <div ui-view>this is the ng-view</div>
+    <a href="/">Home</a> :
+    <a href="/admin">Admin</a> :
+    <a href="/explore">Explore</a>
+
+    <div class="content" ui-view>this is the ng-view</div>
     <a href="/flipflops/">Flipflops</a>
     <a href="/wibble">wibble</a>
     <a href="/unknown">unknown</a>
@@ -24,6 +31,10 @@
     <a target="_self" href="/wibble">wibble</a>
     <a target="_self" href="/unknown">unknown</a>
     <a target="_self" href="/">home</a><br>
+
+<script>
+document.write(new Date().toString())
+</script>
 
   </body>
 </html>

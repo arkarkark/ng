@@ -1,4 +1,4 @@
-ng = angular.module('Ng', ['ui.router', 'MyLocationModule', 'NgCtrlModule'])
+ng = angular.module('Ng', ['ui.router', 'ExploreModule', 'MyLocationModule', 'NgCtrlModule'])
 
 BaseRoute = ($locationProvider, $stateProvider, $urlRouterProvider) ->
   $locationProvider.html5Mode(true)

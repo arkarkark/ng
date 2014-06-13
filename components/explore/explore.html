@@ -1,0 +1,16 @@
+<p>This is the explore page: {{exploreCtrl.getCount()}}</p>
+
+
+<button ng-click="exploreCtrl.addParamLocation()">Location</button>
+<button ng-click="exploreCtrl.addParamStateParams()">StateParams</button>
+<button ng-click="exploreCtrl.addParamGo()">Go</button>
+
+<p>$location.search</p>
+<ul>
+<li ng-repeat="(key, value) in exploreCtrl.$location.search()">{{key}}: {{value}}</li>
+</ul>
+
+<p>$stateParams</p>
+<ul>
+<li ng-repeat="(key, value) in exploreCtrl.$stateParams">{{key}}: {{value}}</li>
+</ul>
